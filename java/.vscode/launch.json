@@ -1,0 +1,49 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - ASumThreads",
+            "request": "launch",
+            "mainClass": "ASumThreads",
+            "projectName": "java_614fd1f3"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - MyPair",
+            "request": "launch",
+            "mainClass": "MyPair",
+            "projectName": "java_614fd1f3"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Test",
+            "request": "launch",
+            "mainClass": "Test",
+            "projectName": "java_614fd1f3"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Reader",
+            "request": "launch",
+            "mainClass": "Reader",
+            "projectName": "java_614fd1f3"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - ZOMCAV",
+            "request": "launch",
+            "mainClass": "codechef.ZOMCAV",
+            "projectName": "java_614fd1f3"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - HelloWorld",
+            "request": "launch",
+            "mainClass": "HelloWorld"
+        }
+    ]
+}

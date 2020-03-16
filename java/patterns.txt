@@ -1,0 +1,80 @@
+Iterator
+
+loop over all objects in a collection.
+provide standard iterator object supplied by all data structures.
+result: can change collection class details without having to change code to traverse the collection.
+
+Singleton
+
+only one instance of class.
+provide global access to the instance.
+constuctor private, private static instance.
+getInstance().
+eg. comparator.
+
+Flyweight
+
+redundant objects slow down System.
+many objects - same state.
+private static hashmap, private constructor.
+public static getInstance.
+eg. point.
+
+Adapter
+
+have object - functionality we need - not in the way we want to use it.
+a special adapter Object which bridges the gap.
+eg. Flyable adapter implements Movable. void move() { type.fly(); }
+
+Strategy
+
+objects that hold diff algo to solve a prob.
+algo changes acc to obj behaviour.
+class behaviour can be changed at Runtime.
+eg. Duck sim, flyable interface, CanFly CannotFly classes implement. polymorphism to store.
+
+Fascade
+
+hide complexities.
+identify simple way to realize relationships b/w entities.
+a unified interfeace to a set of interfaces in a subsystem.
+makes subsystem easier to use.
+eg. call center. switch cases for handle Network, bill, roaming, account.
+
+Template
+
+skeleton of algo.
+subclasses redefine certain steps without changing structure. (abstract in superclass)
+define algo in superclass (final).
+each step - method.
+shared steps in superclass.
+eg. cafe sim.
+
+Prototype
+
+for cloning objects.
+use polymorphism.
+common lab.
+
+Factory
+
+when add or remove support - client code needs recompile.
+ensure consistency.
+helper method to create object according to need.
+abstract AnimalFactory class.
+
+Decorator
+
+modifies bheaviour, adds features to object.
+no need to disruptin existing client code.
+combining classes while initiation.
+eg input : new Scanner(new BufferReader(new FileReader("out.txt")));
+
+Composite
+
+object can be indivisual item or collection of many items.
+help ignore diff b/w indivisual ojects, treat all objects in the composite structure uniformly.
+eg. employee hierarchy, gm prints all the ones below it.
+
+Proxy
+
