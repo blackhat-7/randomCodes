@@ -39,7 +39,7 @@ class Graph {
 
     public void addEdge(int s, int d, int w) {
         adjList.get(s).add(new Node(d, w));
-        adjList.get(d).add(new Node(s, w));
+        // adjList.get(d).add(new Node(s, w));        Uncomment for undirected graph
     }
 
     public void bfs(int s) {
@@ -80,7 +80,8 @@ class Graph {
         }
         pq.add(new Node(s, 0));
         dist[s] = 0;
-        while(settled.size() != vertices){
+        while(settled.size() != vertices && pq.size() != 0){
+            System.out.println(pq.size());
             int v = pq.remove().dest;
             settled.add(v);
             relaxNeighbours(v, settled, pq, dist);
@@ -108,18 +109,65 @@ class Graph {
         System.out.println();
     }
 
+    public void findNeighbours(int v, boolean visited[]) {
+        visited[v] = true;
+        for(Node i : adjList.get(v)) {
+            if(!visited[i.dest])
+                findNeighbours(i.dest, visited);
+        }
+    }
+
+    public int findMotherVertex() {
+        boolean visited[] = new boolean[vertices];
+        int candidate = 0;
+        for(int i=0; i<vertices; ++i) {
+            if(!visited[i]) {
+                findNeighbours(i, visited);
+                candidate = i;
+            }
+        }
+        boolean finalCheck[] = new boolean[vertices];
+        findNeighbours(candidate, finalCheck);
+        for(int i=0; i<vertices; ++i) {
+            if(!finalCheck[i]) {
+                return -1;
+            }
+        }
+        return candidate;
+    }
+
+    public void allPossiblePaths(int s, int d, List<List<Integer>> allPaths, List<Integer> path) {     //bfs approach
+        if (s == d) {
+            allPaths.add(path);
+            return;
+        }
+        for(Node i : adjList.get(s)) {
+            path.add(i.dest);
+            allPossiblePaths(i.dest, d, allPaths, new ArrayList<>(path));
+            path.remove(path.size()-1);
+        }
+        return;
+    }
+
     public static void main(String[] args) {
-        Graph g = new Graph(6);
-        g.addEdge(0, 1, 2);
-        g.addEdge(0, 2, 4);
-        g.addEdge(1, 2, 1);
-        g.addEdge(1, 3, 7);
-        g.addEdge(2, 4, 3);
-        g.addEdge(4, 5, 5);
-        g.addEdge(3, 5, 1);
-        g.addEdge(3, 4, 2);
+        Graph g = new Graph(5);
+        g.addEdge(0, 1, 1); 
+        g.addEdge(0, 2, 1); 
+        g.addEdge(0, 4, 1); 
+        g.addEdge(1, 3, 1); 
+        g.addEdge(1, 4, 1); 
+        g.addEdge(2, 4, 1);
+        g.addEdge(3, 2, 1);  
+
         g.bfs(0);
         g.singleSourceShortestPathDjikstra(0);
         g.DFS(0);
+        System.out.println(g.findMotherVertex());
+
+        List<List<Integer>> allPaths = new ArrayList<>();
+        g.allPossiblePaths(0, 4, allPaths, new ArrayList<Integer>());
+        System.out.println(allPaths);
+
+        
     }
 }
