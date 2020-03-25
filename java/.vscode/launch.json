@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - Animal",
+            "request": "launch",
+            "mainClass": "Animal",
+            "projectName": "java_51f15ed5"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - ASumThreads",
             "request": "launch",
             "mainClass": "ASumThreads",
