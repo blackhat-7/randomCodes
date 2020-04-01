@@ -4,7 +4,13 @@
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
-    
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Trie",
+            "request": "launch",
+            "mainClass": "Trie",
+            "projectName": "ds_c78b7209"
+        },
         {
             "type": "java",
             "name": "Debug (Launch) - Current File",

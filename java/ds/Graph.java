@@ -1,5 +1,7 @@
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
@@ -25,6 +27,16 @@ class Edge implements Comparable<Edge> {
         else if(this.cost < o.cost) return -1;
         else return 0;
     }
+    @Override
+    public String toString() {
+        return src + "-" + dest + " : " + cost;
+    }
+    @Override
+    public boolean equals(Object o) {
+        if(!(o instanceof Edge)) return false;
+        Edge e = (Edge) o;
+        return src == e.src && dest == e.dest && cost == e.cost;
+    }
 }
 
 class Graph {
@@ -41,10 +53,16 @@ class Graph {
         }
     }
 
+    //directed
     public void addEdge(int s, int d, int w) {
         Edge e = new Edge(s, d, w);
         edges.add(e);
         adjList.get(s).add(e);
+    }
+
+    public void removeEdge(Edge e) {
+        edges.remove(e);
+        adjList.get(e.src).remove(e);
     }
 
     public void bfs(int s) {
@@ -69,8 +87,10 @@ class Graph {
         for(Edge i : adjList.get(v)) {
             if(!settled.contains(i.dest)) {
                 if(dist[i.dest] > dist[v]+i.cost) {
+                    int prevDist = dist[i.dest];
                     dist[i.dest] = dist[v] + i.cost;
                     pq.add(new Edge(i.src, i.dest, dist[i.dest]));
+                    System.out.println("Distance from " + v + " to " + i.dest + " changed from " + prevDist + " to " + dist[i.dest] + " and added edge to pq");
                 }
             }
         }
@@ -86,9 +106,9 @@ class Graph {
         pq.add(new Edge(-1, s, 0));
         dist[s] = 0;
         while(settled.size() != vertices && pq.size() != 0){
-            System.out.println(pq.size());
             int v = pq.remove().dest;
             settled.add(v);
+            System.out.println(v + " is settled");
             relaxNeighbours(v, settled, pq, dist);
         }
         System.out.println(Arrays.toString(dist));
@@ -230,17 +250,66 @@ class Graph {
         return sortedVertices;
     }
 
+    public Graph kruskalsMST() {
+        Graph mst = new Graph(vertices);
+        Collections.sort(edges);
+        for(Edge i : edges) {
+            mst.addEdge(i.src, i.dest, i.cost);
+            if(mst.isCyclicUndirected()) {
+                mst.removeEdge(i);
+            }
+            if(mst.edges.size() >= vertices-1)
+                break;
+        }
+        return mst;
+    } 
+
+    public int[] bellmanFord(int source) {
+        //set distance for all vertices to inf
+        int dist[] = new int[vertices];
+        for(int i=0; i<vertices; ++i) {
+            dist[i] = Integer.MAX_VALUE;
+        }
+        dist[source] = 0;
+
+        // keep modifying the edges v-1 times or till it does not modify anymore
+        boolean modified = true;
+        int count = vertices-1;
+        while(count > 0 && modified) {
+            modified = false;
+            for(Edge e : edges) {
+                int u = e.src, v = e.dest, w = e.cost;
+                if(dist[u] != Integer.MAX_VALUE && dist[u]+w < dist[v]) {
+                    dist[v] = dist[u] + w;
+                    modified = true;
+                }
+            }
+            --count;
+        }
+
+        //check for negative cycles
+        for(Edge e : edges) {
+            int u = e.src, v = e.dest, w = e.cost;
+            if(dist[u] != Integer.MAX_VALUE && dist[u]+w < dist[v]) {
+                System.out.println("Negative Cycle exists");
+                return null;
+            }
+        }
+        return dist;
+    }
+
 
     public static void main(String[] args) {
         Graph g = new Graph(5);
-        g.addEdge(0, 1, 1); 
-        g.addEdge(0, 2, 1); 
-        g.addEdge(0, 4, 1); 
-        g.addEdge(1, 3, 1);
-        g.addEdge(1, 4, 1); 
-        g.addEdge(2, 4, 1);
-        g.addEdge(3, 2, 1); 
+        g.addEdge(0, 1, -1);
+        g.addEdge(0, 2, 4);
+        g.addEdge(1, 4, 2);
+        g.addEdge(1, 2, 3);
+        g.addEdge(1, 3, 2);
+        g.addEdge(4, 3, -3);
+        g.addEdge(3, 2, 5);
+        g.addEdge(3, 1, 1);
 
-        System.out.println(Arrays.toString(g.topologicalSort()));
+        System.out.println(Arrays.toString(g.bellmanFord(0)));
     }
 }
