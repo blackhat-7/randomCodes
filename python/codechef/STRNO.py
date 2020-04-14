@@ -1,7 +1,8 @@
 import sys
 from math import comb
 def main():
-    t = int(input)
+    print(comb(1000000000, 1000000000//2))
+    t = int(input())
     for q in range(t):
         x, k = map(int, input().split())
         numFactors = 0
