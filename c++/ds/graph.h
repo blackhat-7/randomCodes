@@ -6,6 +6,7 @@ class Graph {
 private:
     int V;
     std::vector<std::pair<int, int>> *adj;
+    bool bfs_ford(int s, int t, int parent[]);
 
 public:
     Graph(int V) { 
@@ -17,6 +18,7 @@ public:
     }
     void addEdge(int src, int dest, int wt);
     void bfs(int src);
+    void fordFulkerson(int s, int t);
 
 };
 
