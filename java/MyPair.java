@@ -1,9 +1,3 @@
-import java.util.*;
-
-import javax.xml.transform.Templates;
-
-import javafx.stage.Stage;
-
 interface Pair <K, V> {
     public K getKey();
     public V getValue();
@@ -32,10 +26,7 @@ public class MyPair <K, V> {
         if (course == courseCopy) {
             System.out.println("sdfsdfsf");
         }
-        Object array[] = new Integer[10];
-
-        Main main = new Main();
-        main.r();
+        // Object array[] = new Integer[10];
     }
 }
 

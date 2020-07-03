@@ -15,6 +15,7 @@ public class joiurneyInMatrix
             }
         }
         forward(arr, 0, 0, n);
+        sc.close();
     }
     public static int forward(int[][] arr, int i, int j, int n)
     {

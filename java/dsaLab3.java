@@ -23,6 +23,7 @@ public class dsaLab3 {
                 System.out.println(-1);
             }
         }
+        sc.close();
     }
 
     public static int binarySearch(int[] arr, int low, int high, int val, int lowest, int highest) {
