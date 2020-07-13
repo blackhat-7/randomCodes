@@ -1,3 +1,5 @@
+package OOP;
+
 public class CookieJar {
     private volatile int cookieNum;
     private volatile boolean available;
