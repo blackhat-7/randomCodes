@@ -1,8 +1,9 @@
 package prefixSum;
+import java.util.*;
 
 public class MaxOccurEleInRange {
-
     public static void main(String[] args) {
+        
         int MAX = 1000000;
         int[] L = {1, 4, 9, 13, 21};
         int[] R = {15, 8, 12, 20, 30}; 
