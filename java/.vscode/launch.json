@@ -6,6 +6,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - StackSort",
+            "request": "launch",
+            "mainClass": "StackSort",
+            "projectName": "java_83106008"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - MyQueue",
+            "request": "launch",
+            "mainClass": "MyQueue",
+            "projectName": "java_83106008"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - MyQueue",
+            "request": "launch",
+            "mainClass": "ds.MyQueue",
+            "projectName": "java_83106008"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - Animal",
             "request": "launch",
             "mainClass": "Animal",
