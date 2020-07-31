@@ -7,39 +7,31 @@
 # @lc code=start
 class Solution:
     def findLadders(self, beginWord: str, endWord: str, wordList: List[str]) -> List[List[str]]:
-        graph = collections.defaultdict(set)
-        wordList.append(beginWord)
-        n = len(wordList)
-        if n == 1:
+        tree, wordSet, n = collections.defaultdict(set), set(wordList), len(beginWord)
+        if endWord not in wordList:
             return []
-            
-        m = len(wordList[0])
-        for i in range(n-1):
-            for j in range(i+1, n):
-                if all(wordList[i][k] == wordList[j][k] for k in range(m)):
-                    graph[i].add(j)
-                    graph[j].add(i)
-            
-        # BFS for all shortest paths
-        def bfs(src):
-            q = collections.deque()
-            dist = [float('inf')] * n
-            parent = [set() for i in range(n)]
-            q.append(src)
-            dist[src] = 0
-            while q:
-                u = q.popleft()
-                for v in graph[u]:
-                    if dist[v] > dist[u] + 1:
-                        dist[v] = dist[u] + 1
-                        parent[v] = set([u])
-                        q.push(v)
-                    elif dist[v] == dist[u] + 1:
-                        parent[v].add(u)
-            print(dist, parent)
+        found, beginLayer, endLayer, newLayer, rev = False, {beginWord}, {endWord}, set(), False
 
-        bfs(n-1)
-        return []
+        while beginLayer and not found: 
+            wordSet -= beginLayer
+            for x in beginLayer:
+                for y in [x[:i]+c+x[i+1:] for i in range(n) for c in 'qwertyuiopasdfghjklzxcvbnm']:
+                    if y in wordSet:
+                        if y in endLayer:
+                            found = True
+                        else:
+                            newLayer.add(y)
+                        tree[x].add(y) if not rev else tree[y].add(x)
+            beginLayer, newLayer = newLayer, set()
+            if beginLayer > endLayer:
+                beginlayer, endLayer, rev = endLayer, beginLayer, not rev
+        
+        def findPath(x):
+            return [[x]] if x == endWord else [[x] + rest for y in tree[x] for rest in findPath(y)]
+
+        return findPath(beginWord)
+            
+            
         
 # @lc code=end
 
