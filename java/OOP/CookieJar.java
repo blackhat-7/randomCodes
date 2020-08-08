@@ -48,6 +48,7 @@ class Marge implements Runnable {
     public Marge(CookieJar jar) {
         this.jar = jar;
     }
+    @Override
     public void run() {
         for (int i=0; i<5; ++i) { bake(i); }
     }    
@@ -67,6 +68,7 @@ class Homer implements Runnable {
     public Homer(CookieJar jar) {
         this.jar = jar;
     }
+    @Override
     public void run() {
         for (int i=0; i<5; ++i) { eat(); }
     }
