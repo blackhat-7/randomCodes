@@ -6,72 +6,65 @@
     "configurations": [
         {
             "type": "java",
-            "name": "CodeLens (Launch) - StackSort",
+            "name": "Debug (Launch) - Current File",
             "request": "launch",
-            "mainClass": "StackSort",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Graph<java_83106008>",
+            "request": "launch",
+            "mainClass": "Graph",
             "projectName": "java_83106008"
         },
         {
             "type": "java",
-            "name": "CodeLens (Launch) - MyQueue",
+            "name": "Debug (Launch)-MST<java_83106008>",
+            "request": "launch",
+            "mainClass": "MST",
+            "projectName": "java_83106008"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-MinHeap<java_83106008>",
+            "request": "launch",
+            "mainClass": "MinHeap",
+            "projectName": "java_83106008"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-MyLinkedList<java_83106008>",
+            "request": "launch",
+            "mainClass": "MyLinkedList",
+            "projectName": "java_83106008"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-MyQueue<java_83106008>",
             "request": "launch",
             "mainClass": "MyQueue",
             "projectName": "java_83106008"
         },
         {
             "type": "java",
-            "name": "CodeLens (Launch) - MyQueue",
+            "name": "Debug (Launch)-StackSort<java_83106008>",
             "request": "launch",
-            "mainClass": "ds.MyQueue",
+            "mainClass": "StackSort",
             "projectName": "java_83106008"
         },
         {
             "type": "java",
-            "name": "CodeLens (Launch) - Animal",
+            "name": "Debug (Launch)-StringCompression<java_83106008>",
             "request": "launch",
-            "mainClass": "Animal",
-            "projectName": "java_51f15ed5"
+            "mainClass": "StringCompression",
+            "projectName": "java_83106008"
         },
         {
             "type": "java",
-            "name": "CodeLens (Launch) - ASumThreads",
+            "name": "Debug (Launch)-Trie<java_83106008>",
             "request": "launch",
-            "mainClass": "ASumThreads",
-            "projectName": "java_614fd1f3"
-        },
-        {
-            "type": "java",
-            "name": "CodeLens (Launch) - MyPair",
-            "request": "launch",
-            "mainClass": "MyPair",
-            "projectName": "java_614fd1f3"
-        },
-        {
-            "type": "java",
-            "name": "CodeLens (Launch) - Test",
-            "request": "launch",
-            "mainClass": "Test",
-            "projectName": "java_614fd1f3"
-        },
-        {
-            "type": "java",
-            "name": "CodeLens (Launch) - Reader",
-            "request": "launch",
-            "mainClass": "Reader",
-            "projectName": "java_614fd1f3"
-        },
-        {
-            "type": "java",
-            "name": "CodeLens (Launch) - ZOMCAV",
-            "request": "launch",
-            "mainClass": "codechef.ZOMCAV",
-            "projectName": "java_614fd1f3"
-        },
-        {
-            "type": "java",
-            "name": "CodeLens (Launch) - HelloWorld",
-            "request": "launch",
-            "mainClass": "HelloWorld"
+            "mainClass": "Trie",
+            "projectName": "java_83106008"
         }
     ]
 }
