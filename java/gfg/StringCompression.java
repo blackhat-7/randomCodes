@@ -1,5 +1,3 @@
-import java.util.*;
-
 class StringCompression {
 
     String compress(String s1) {

@@ -25,7 +25,7 @@ class Node
 }
 
 
-public class ConstructBT
+class ConstructBT
 {
     Node root;
     public static void main (String[] args) {
@@ -50,7 +50,8 @@ public class ConstructBT
 	        System.out.println();
 	        
 	        
-	    }
+        }
+        sc.close();
     }
     
    static void printPreOrder(Node node)

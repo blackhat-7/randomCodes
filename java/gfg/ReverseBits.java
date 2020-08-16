@@ -1,4 +1,4 @@
-import java.util.*;
+// import java.util.*;
 
 public class ReverseBits {
     public static void printBin(int n) {
@@ -17,7 +17,7 @@ public class ReverseBits {
             num >>>= 1;
         }
         printBin(revNum);
-        LinkedList<Integer> n = new LinkedList<>();
-        int[] arr = n.stream().mapToInt(i -> i).toArray();
+        // LinkedList<Integer> n = new LinkedList<>();
+        // int[] arr = n.stream().mapToInt(i -> i).toArray();
     }
 }

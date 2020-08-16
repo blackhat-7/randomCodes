@@ -1,8 +1,3 @@
-import java.util.*;
-import java.lang.*;
-import java.io.*;
-
-
 class MyBT {
     static class Node  {
         Node left = null, right = null;
