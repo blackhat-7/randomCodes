@@ -1,75 +1,87 @@
+
 /*package whatever //do not write package name here */
 
+import java.util.*;
 import java.io.*;
+import java.lang.*;
 
 class Gfg {
-    static class Pair {
-        long key, val;
-        Pair(long key, long val) { this.key = key; this.val = val; }
+    static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+    static StringTokenizer st;
+
+    int dfs(int mat[][], int i, int j, int dp[][]) {
+        if (i < 0 || j < 0 || j == mat.length) {
+            return Integer.MAX_VALUE;
+        }
+        if (i == mat.length) {
+            return 0;
+        }
+        if (dp[i][j] == -1) {
+            int down = dfs(mat, i+1, j, dp);
+            int left = dfs(mat, i+1, j-1, dp);
+            int right = dfs(mat, i+1, j+1, dp);
+            dp[i][j] = Math.min(down, Math.min(left, right)) + mat[i][j];
+        }
+        return dp[i][j];
     }
 
-    int LAS(int[] arr, int n) {
-        int countInc = 1;
-        int lastInc = arr[0];
-        int countDec = 1;
-        int lastDec = arr[0];
-        boolean inc_isInc = true;
-        boolean dec_isInc = false;
-        for (int i=5; i<n; i++) {
-            if (arr[i] > lastInc && inc_isInc) {
-                System.out.print(arr[i] + " ");
-                lastInc = arr[i];
-                inc_isInc = false;
-                countInc++;
-            } else if (arr[i] < lastInc && !inc_isInc) {
-                System.out.print(arr[i] + " ");
-                lastInc = arr[i];
-                inc_isInc = true;
-                countInc++;
-            }
-
-            if (arr[i] > lastDec && dec_isInc) {
-                lastDec = arr[i];
-                dec_isInc = false;
-                countDec++;
-            } else if (arr[i] < lastDec && !dec_isInc) {
-                lastDec = arr[i];
-                dec_isInc = true;
-                countDec++;
-            }
+    String letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    
+    List<String> helper(int arr[], int i, Map<Integer,List<String>> dp) {
+        if (i == arr.length) {
+            return new ArrayList<>(Arrays.asList(""));
         }
+        if (arr[i]==0)
+            return null;
+        if (!dp.containsKey(i)) {
+            List<String> res = new ArrayList<>();
+            List<String> sing = helper(arr, i+1, dp);
+            for (String s : sing) {
+                res.add(letters.charAt(arr[i]-1) + s);
+            }
+            if (i+1<arr.length && 10*arr[i] + arr[i+1] >= 1 && 10*arr[i] + arr[i+1] <= 26) {
+                List<String> doub = helper(arr, i+2, dp);
+                char ch = letters.charAt(10*arr[i] + arr[i+1]-1);
+                for (String s : doub) {
+                    res.add(ch + s);
+                }
+            }
+            dp.put(i, res);
+        }
+        return dp.get(i);
+    }
+
+    void solve() throws IOException {
+        st = new StringTokenizer(br.readLine());
+        int n = Integer.parseInt(st.nextToken());
+        st = new StringTokenizer(br.readLine());
+        int arr[] = new int[n];
+        int i = 0;
+        while (st.hasMoreTokens()) {
+            arr[i++] = Integer.parseInt(st.nextToken());
+        }
+        List<String> res = helper(arr, 0, new HashMap<Integer,List<String>>());
+        for (String s : res)
+            System.out.print(s + " ");
         System.out.println();
-        System.out.println(countInc + " " + countDec);
-        return Math.max(countInc, countDec);
     }
 
 	public static void main (String[] args) throws IOException {
         Gfg gfg = new Gfg();
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         long t = Long.parseLong(br.readLine());
         while (t-- > 0) {
-            int n = Integer.parseInt(br.readLine());
-            String[] s1 = br.readLine().split(" ");
-            int[] arr1 = new int[n];
-            for (int i=0; i<n; i++) {
-                arr1[i] = Integer.parseInt(s1[i]);
-            }
-            System.out.println(gfg.LAS(arr1, n));
-            
+            gfg.solve();
         }
 	}
-}
-/*
-Input:
-2
-6
-1 3 0 5 8 5
-2 4 6 7 9 9
-8
-75250 50074 43659 8931 11273 27545 50879 77924
-112960 114515 81825 93424 54316 35533 73383 160252
 
-Output:
-1 2 4 5
-6 7 1
-*/
+    static class Tuple {
+        int a, b, c;
+        Tuple(int a, int b) { this.a = a; this.b = b;}
+        Tuple(int a, int b, int c) { this.a = a; this.b = b; this.c = c; }
+        
+    }
+
+    int gcd(int x, int y) {
+        return (y == 0) ? x : gcd(y, x%y);
+    }
+}

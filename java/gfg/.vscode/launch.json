@@ -1,0 +1,147 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Debug (Launch) - Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-ArticulationPoints<gfg_c46808e1>",
+            "request": "launch",
+            "mainClass": "ArticulationPoints",
+            "projectName": "gfg_c46808e1"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-BoxStack<gfg_c46808e1>",
+            "request": "launch",
+            "mainClass": "BoxStack",
+            "projectName": "gfg_c46808e1"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-ConsecutiveLargestSubarray<gfg_c46808e1>",
+            "request": "launch",
+            "mainClass": "ConsecutiveLargestSubarray",
+            "projectName": "gfg_c46808e1"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-ConstructBT<gfg_c46808e1>",
+            "request": "launch",
+            "mainClass": "ConstructBT",
+            "projectName": "gfg_c46808e1"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Gfg<gfg_c46808e1>",
+            "request": "launch",
+            "mainClass": "Gfg",
+            "projectName": "gfg_c46808e1"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-GraphColoring<gfg_c46808e1>",
+            "request": "launch",
+            "mainClass": "GraphColoring",
+            "projectName": "gfg_c46808e1"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-MergeIntervals<gfg_c46808e1>",
+            "request": "launch",
+            "mainClass": "MergeIntervals",
+            "projectName": "gfg_c46808e1"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-MinimumSumPartition<gfg_c46808e1>",
+            "request": "launch",
+            "mainClass": "MinimumSumPartition",
+            "projectName": "gfg_c46808e1"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-MultiplyLarge<gfg_c46808e1>",
+            "request": "launch",
+            "mainClass": "MultiplyLarge",
+            "projectName": "gfg_c46808e1"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-NthRoot<gfg_c46808e1>",
+            "request": "launch",
+            "mainClass": "NthRoot",
+            "projectName": "gfg_c46808e1"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-QuickSort<gfg_c46808e1>",
+            "request": "launch",
+            "mainClass": "QuickSort",
+            "projectName": "gfg_c46808e1"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-RabinCarp<gfg_c46808e1>",
+            "request": "launch",
+            "mainClass": "RabinCarp",
+            "projectName": "gfg_c46808e1"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-ReverseBits<gfg_c46808e1>",
+            "request": "launch",
+            "mainClass": "ReverseBits",
+            "projectName": "gfg_c46808e1"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-SearchRotatedArray<gfg_c46808e1>",
+            "request": "launch",
+            "mainClass": "SearchRotatedArray",
+            "projectName": "gfg_c46808e1"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-ShortestCommonSupersequence<gfg_c46808e1>",
+            "request": "launch",
+            "mainClass": "ShortestCommonSupersequence",
+            "projectName": "gfg_c46808e1"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-StackSort<gfg_c46808e1>",
+            "request": "launch",
+            "mainClass": "StackSort",
+            "projectName": "gfg_c46808e1"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-StringCompression<gfg_c46808e1>",
+            "request": "launch",
+            "mainClass": "StringCompression",
+            "projectName": "gfg_c46808e1"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-countInversionBT<gfg_c46808e1>",
+            "request": "launch",
+            "mainClass": "countInversionBT",
+            "projectName": "gfg_c46808e1"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-test<gfg_c46808e1>",
+            "request": "launch",
+            "mainClass": "test",
+            "projectName": "gfg_c46808e1"
+        }
+    ]
+}
