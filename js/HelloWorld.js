@@ -35,26 +35,26 @@
 
 
 class Media {
-    constructor(type) {
-        this.type = type
-    }
-    
-    use() {
-        if (this.type == 'song') { this.play(); }
-    }
+  constructor(type) {
+    this.type = type
+  }
+
+  use() {
+    if (this.type == 'song') { this.play(); }
+  }
 }
 
 
 class Song extends Media {
-    constructor(title, author) {
-        super('song');
-        this.title = title;
-        this.author = author;
-    }
+  constructor(title, author) {
+    super('song');
+    this.title = title;
+    this.author = author;
+  }
 
-    play() {
-        console.log("Now playing " + this.title + " by " + this.author);
-    }
+  play() {
+    console.log("Now playing " + this.title + " by " + this.author);
+  }
 }
 
 const mySong = new Song('insert song name', 'Shaunak');
