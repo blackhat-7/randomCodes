@@ -1,0 +1,51 @@
+Traceback (most recent call last):
+  File "AmazonPrices.py", line 66, in <module>
+    send_mail()
+  File "AmazonPrices.py", line 37, in send_mail
+    current_price = get_price()
+  File "AmazonPrices.py", line 11, in get_price
+    driver = webdriver.Chrome()
+  File "/home/illusion/.local/lib/python3.8/site-packages/selenium/webdriver/chrome/webdriver.py", line 76, in __init__
+    RemoteWebDriver.__init__(
+  File "/home/illusion/.local/lib/python3.8/site-packages/selenium/webdriver/remote/webdriver.py", line 157, in __init__
+    self.start_session(capabilities, browser_profile)
+  File "/home/illusion/.local/lib/python3.8/site-packages/selenium/webdriver/remote/webdriver.py", line 252, in start_session
+    response = self.execute(Command.NEW_SESSION, parameters)
+  File "/home/illusion/.local/lib/python3.8/site-packages/selenium/webdriver/remote/webdriver.py", line 319, in execute
+    response = self.command_executor.execute(driver_command, params)
+  File "/home/illusion/.local/lib/python3.8/site-packages/selenium/webdriver/remote/remote_connection.py", line 374, in execute
+    return self._request(command_info[0], url, body=data)
+  File "/home/illusion/.local/lib/python3.8/site-packages/selenium/webdriver/remote/remote_connection.py", line 397, in _request
+    resp = self._conn.request(method, url, body=body, headers=headers)
+  File "/usr/lib/python3.8/site-packages/urllib3/request.py", line 79, in request
+    return self.request_encode_body(
+  File "/usr/lib/python3.8/site-packages/urllib3/request.py", line 171, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+  File "/usr/lib/python3.8/site-packages/urllib3/poolmanager.py", line 336, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "/usr/lib/python3.8/site-packages/urllib3/connectionpool.py", line 670, in urlopen
+    httplib_response = self._make_request(
+  File "/usr/lib/python3.8/site-packages/urllib3/connectionpool.py", line 426, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 3, in raise_from
+  File "/usr/lib/python3.8/site-packages/urllib3/connectionpool.py", line 421, in _make_request
+    httplib_response = conn.getresponse()
+  File "/usr/lib/python3.8/http/client.py", line 1347, in getresponse
+    response.begin()
+  File "/usr/lib/python3.8/http/client.py", line 307, in begin
+    version, status, reason = self._read_status()
+  File "/usr/lib/python3.8/http/client.py", line 268, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "/usr/lib/python3.8/socket.py", line 669, in readinto
+    return self._sock.recv_into(b)
+KeyboardInterrupt
+Product:
+Apple 13.3 inch MacBook Pro with Touch Bar, Intel Core i7 Quad-Core, 8GB RAM, 256GB SSD Z0W40LL/A, Latest Model w/ Exclusive Specs (Renewed)
+
+Price:
+$1,199.66
+Mail has bee sent!
+Traceback (most recent call last):
+  File "AmazonPrices.py", line 67, in <module>
+    time.sleep(60)
+KeyboardInterrupt
