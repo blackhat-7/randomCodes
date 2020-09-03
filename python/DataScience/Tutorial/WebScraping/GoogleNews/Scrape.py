@@ -18,7 +18,7 @@ def get_news(search_key: str):
   soup = BeautifulSoup(html, 'html.parser') 
   
   headlines = []
-  for _ in range(3):
+  for _ in range(10):
     head = soup.find_all('div', attrs={ 'class': 'JheGif nDgy9d' })
     headlines += [h.text for h in head]
     next_btn = driver.find_element_by_id('pnnext')
