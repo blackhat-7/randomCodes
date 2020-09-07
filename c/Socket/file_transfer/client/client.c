@@ -34,6 +34,10 @@ int receive_data() {
         num_bytes_received++;
         printf("Received : %llf MB\n", (num_bytes_received/1024));
         fwrite(buffer, 1, bytes_received, f);
+        if (bytes_received < 1024) {
+            printf("EOF reached");
+            break;
+        }
         bzero(buffer, 1024);
     }
     
