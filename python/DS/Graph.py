@@ -1,15 +1,15 @@
 class Graph:
     V = None
-    mat = []
+    adj = []
     def __init__(self, v):
         self.V = v
-        self.mat = [[] for i in range(v)]
+        self.adj = [[] for i in range(v)]
 
     def addEdge(self, s, e):
-        self.mat[s].append(e)
+        self.adj[s].append(e)
 
     def print(self):
-        print(self.mat)
+        print(self.adj)
 
     def DFS(self, start):
         visited = [False for i in range(self.V)]
@@ -19,7 +19,7 @@ class Graph:
     def DFSUtil(self, start, visited):
         visited[start] = True
         print(start, end=" ")
-        for i in self.mat[start]:
+        for i in self.adj[start]:
             if not visited[i]:
                 self.DFSUtil(i, visited)
 
@@ -30,7 +30,7 @@ class Graph:
             start = queue.pop(0)
             visited[start] = True
             print(start, end = " ")
-            for i in self.mat[start]:
+            for i in self.adj[start]:
                 if not visited[i]:
                     queue.append(i)
         print()

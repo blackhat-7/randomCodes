@@ -5,6 +5,7 @@
 #include <sys/types.h>
 
 #include <netinet/in.h>
+#include <unistd.h>
 
 int main() {
 	
@@ -21,7 +22,7 @@ int main() {
 	server_address.sin_addr.s_addr = INADDR_ANY;
 
 	// Bind the socket to our specified IP and port
-	bind(server_socket, (struct sockaddr_in*) &server_address, sizeof(server_address));
+	bind(server_socket, (struct sockaddr*) &server_address, sizeof(server_address));
 
 	//listen for connetions
 	listen(server_socket, 1);

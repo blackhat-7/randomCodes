@@ -6,7 +6,7 @@ def dutch(arr, n):
     while mid <= j:
         if arr[mid] == 0:
             arr[mid], arr[i] = arr[i], arr[mid]
-            i += 1; mid += 1 
+            i += 1; mid += 1
         elif arr[mid] == 2:
             arr[mid], arr[j] = arr[j], arr[mid]
             j -= 1

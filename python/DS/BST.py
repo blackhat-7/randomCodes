@@ -11,23 +11,28 @@ class BST:
     root = None
 
     def add(self, val):
-        self.root = self.addUtil(self.root, val)
+        def addUtil(root, val):
+            if root==None:
+                root = Node(val)
+
+            else:
+                if val > root.key:
+                    root.right =  addUtil(root.right, val)
+                else:
+                    root.left = addUtil(root.left, val)
+
+            return root
+
+        self.root = addUtil(self.root, val)
         return self.root
 
-    def addUtil(self, root, val):
-        if root==None:
-            root = Node(val)
 
-        else:
-            if val > root.key:
-               root.right =  self.addUtil(root.right, val)
-            else:
-                root.left = self.addUtil(root.left, val)
-
-        return root
-    
-
-
+    def k_dist_nodes(self, key: int, k: int) -> None:
+        def util(node: Node, key: int, k: int, path: list):
+            if node is None:
+                return None
+            if node.key == key:
+                return 
 
 def main():
     bst = BST()
