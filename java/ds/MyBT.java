@@ -2,11 +2,14 @@ import java.util.*;
 
 class MyBT {
     Node root;
+
     void add(int key) {
         root = addUtil(root, key);
     }
+
     Node addUtil(Node root, int key) {
-        if (root == null) return new Node(key);
+        if (root == null)
+            return new Node(key);
         if (key < root.data) {
             root.left = addUtil(root.left, key);
         } else {
@@ -14,13 +17,14 @@ class MyBT {
         }
         return root;
     }
-    
+
     void inorder() {
         System.out.println("Inorder: ");
         inorderRecur(root);
         System.out.println();
         inorderIter();
     }
+
     void inorderRecur(Node node) {
         if (node != null) {
             inorderRecur(node.left);
@@ -28,14 +32,14 @@ class MyBT {
             inorderRecur(node.right);
         }
     }
+
     void inorderIter() {
         Node curr = root;
         while (curr != null) {
             if (curr.left == null) {
                 System.out.print(curr.data + " ");
                 curr = curr.right;
-            }
-            else {
+            } else {
                 Node pre = curr.left;
                 while (pre.right != null && pre.right != curr) {
                     pre = pre.right;
@@ -60,6 +64,7 @@ class MyBT {
         System.out.println();
         preorderIter();
     }
+
     void preorderRecur(Node root) {
         if (root != null) {
             System.out.print(root.data + " ");
@@ -98,6 +103,7 @@ class MyBT {
         System.out.println();
         postorderIter();
     }
+
     void postorderRecur(Node root) {
         if (root != null) {
             postorderRecur(root.right);
@@ -105,6 +111,7 @@ class MyBT {
             postorderRecur(root.left);
         }
     }
+
     void postorderIter() {
         Node curr = root;
         while (curr != null) {
@@ -132,10 +139,14 @@ class MyBT {
     void convertToMirror() {
         convertToMirrorUtil(root);
     }
+
     void convertToMirrorUtil(Node root) {
-        if (root == null) return;
-        if (root.left != null) convertToMirrorUtil(root.left);
-        if (root.right != null) convertToMirrorUtil(root.right);
+        if (root == null)
+            return;
+        if (root.left != null)
+            convertToMirrorUtil(root.left);
+        if (root.right != null)
+            convertToMirrorUtil(root.right);
         Node temp = root.left;
         root.left = root.right;
         root.right = temp;
@@ -151,6 +162,7 @@ class MyBT {
         else
             System.out.println("Not present");
     }
+
     boolean lcaUtil(Node root, Node[] lca, int key1, int key2) {
         if (root == null) {
             return false;
@@ -163,8 +175,9 @@ class MyBT {
         if (left && right)
             lca[0] = root;
         return left || right;
-        
+
     }
+
     boolean search(Node root, int key) {
         if (root == null) {
             return false;
@@ -179,7 +192,7 @@ class MyBT {
         Queue<Node> q = new LinkedList<>();
         q.add(node);
         q.add(null);
-        while (q.size()!=1) {
+        while (q.size() != 1) {
             node = q.poll();
             if (node == null) {
                 System.out.println();
@@ -203,24 +216,24 @@ class MyBT {
         Stack<Node> s2 = new Stack<>();
         s1.push(node);
         while (!s1.isEmpty() || !s2.isEmpty()) {
-            while(!s1.isEmpty()){
+            while (!s1.isEmpty()) {
                 Node n = s1.pop();
-                System.out.print(n.data+" ");
-                if(n.right!=null){
+                System.out.print(n.data + " ");
+                if (n.right != null) {
                     s2.push(n.right);
                 }
-                if(n.left!=null){
+                if (n.left != null) {
                     s2.push(n.left);
                 }
             }
             System.out.println();
-            while(!s2.isEmpty()){
+            while (!s2.isEmpty()) {
                 Node n = s2.pop();
-                System.out.print(n.data+" ");
-                if(n.left!=null){
+                System.out.print(n.data + " ");
+                if (n.left != null) {
                     s1.push(n.left);
                 }
-                if(n.right!=null){
+                if (n.right != null) {
                     s1.push(n.right);
                 }
             }
@@ -234,19 +247,19 @@ class MyBT {
         Queue<Node> q = new LinkedList<>();
         q.add(node);
         levels.add(node.data);
-        while(!q.isEmpty()){
+        while (!q.isEmpty()) {
             Node n = q.poll();
-            if(n.right!=null){
+            if (n.right != null) {
                 q.add(n.right);
                 levels.add(n.right.data);
             }
-            if(n.left!=null){
+            if (n.left != null) {
                 q.add(n.left);
                 levels.add(n.left.data);
             }
         }
-        for (int i=levels.size()-1;i>=0;i--){
-             System.out.print(levels.get(i)+" ");
+        for (int i = levels.size() - 1; i >= 0; i--) {
+            System.out.print(levels.get(i) + " ");
         }
         System.out.println();
     }
@@ -280,33 +293,33 @@ class MyBT {
     }
 
     void bottomView() {
-        int minX[] = new int[] {Integer.MAX_VALUE}, maxX[] = new int[] {Integer.MIN_VALUE};
-        Map<Integer,int[]> map = new HashMap<>();
-        map.put(0, new int[] {0, root.data});
+        int minX[] = new int[] { Integer.MAX_VALUE }, maxX[] = new int[] { Integer.MIN_VALUE };
+        Map<Integer, int[]> map = new HashMap<>();
+        map.put(0, new int[] { 0, root.data });
         bottomViewUtil(root, 0, 0, minX, maxX, map);
-        for (int i=minX[0]; i<=maxX[0]; i++) {
+        for (int i = minX[0]; i <= maxX[0]; i++) {
             System.out.print(map.get(i)[1] + " ");
         }
         System.out.println();
     }
-    void bottomViewUtil(Node node, int x, int y, int minX[], int maxX[], Map<Integer,int[]> map) {
+
+    void bottomViewUtil(Node node, int x, int y, int minX[], int maxX[], Map<Integer, int[]> map) {
         if (node == null) {
             return;
         }
         if (x < minX[0]) {
             minX[0] = x;
-            map.put(x, new int[] {y, node.data});
-        }
-        else if (x > maxX[0]) {
+            map.put(x, new int[] { y, node.data });
+        } else if (x > maxX[0]) {
             maxX[0] = x;
-            map.put(x, new int[] {y, node.data});
+            map.put(x, new int[] { y, node.data });
         } else {
             if (map.get(x)[0] < y) {
-                map.put(x, new int[] {y, node.data});
+                map.put(x, new int[] { y, node.data });
             }
         }
-        bottomViewUtil(node.left, x-1, y+1, minX, maxX, map);
-        bottomViewUtil(node.right, x+1, y+1, minX, maxX, map);
+        bottomViewUtil(node.left, x - 1, y + 1, minX, maxX, map);
+        bottomViewUtil(node.right, x + 1, y + 1, minX, maxX, map);
     }
 
     void areTheyCousins(int x, int y) {
@@ -319,6 +332,7 @@ class MyBT {
         }
         System.out.println("Not cousins");
     }
+
     void areTheyCousinsUtil(Node node, Tuple x, Tuple y, Node parent, int level) {
         if (node == null)
             return;
@@ -330,8 +344,8 @@ class MyBT {
             y.parent = parent;
             y.level = level;
         }
-        areTheyCousinsUtil(node.left, x, y, node, level+1);
-        areTheyCousinsUtil(node.right, x, y, node, level+1);
+        areTheyCousinsUtil(node.left, x, y, node, level + 1);
+        areTheyCousinsUtil(node.right, x, y, node, level + 1);
 
     }
 
@@ -344,6 +358,7 @@ class MyBT {
             System.out.println("No cousin exists");
         }
     }
+
     Node printCousinUtil(Node node, Tuple x, Node parent, int level) {
         if (node == null) {
             return null;
@@ -354,9 +369,10 @@ class MyBT {
         } else if (x.level == level && x.parent != parent) {
             return node;
         }
-        Node left = printCousinUtil(node.left, x, node, level+1);
-        if (left != null) return left;
-        return printCousinUtil(node.right, x, node, level+1);
+        Node left = printCousinUtil(node.left, x, node, level + 1);
+        if (left != null)
+            return left;
+        return printCousinUtil(node.right, x, node, level + 1);
     }
 
     void checkSumTree() {
@@ -366,6 +382,7 @@ class MyBT {
         }
         System.out.println((checkSumTreeUtil(root) >= 0 ? true : false));
     }
+
     int checkSumTreeUtil(Node node) {
         int left = 0, right = 0;
         boolean isLeaf = true;
@@ -384,17 +401,47 @@ class MyBT {
     }
 
     void diameter() {
-        long diameter[] = new long[] {0};
+        long diameter[] = new long[] { 0 };
         diameterUtil(root, diameter);
         System.out.println(diameter[0]);
     }
+
     long diameterUtil(Node node, long diameter[]) {
         if (node == null)
             return 0;
         long left = diameterUtil(node.left, diameter);
         long right = diameterUtil(node.right, diameter);
-        diameter[0] = Math.max(diameter[0], left+right+1);
+        diameter[0] = Math.max(diameter[0], left + right + 1);
         return Math.max(left, right) + 1;
+    }
+
+    boolean isIdentical(Node root1, Node root2) {
+        if (root1 == null && root2 == null) {
+            return true;
+        }
+
+        return (root1 != null && root2 != null) && (root1.data == root2.data) && isIdentical(root1.left, root2.left)
+                && isIdentical(root1.right, root2.right);
+    }
+
+    void leftView() {
+        HashMap<Integer, Pair> m = new HashMap<>();
+        int[] maxy = new int[] { 0 };
+        leftViewUtil(root, m, 0, 0, maxy);
+        for (int i = 0; i <= maxy[0]; i++) {
+            System.out.println(m.get(i).first);
+        }
+    }
+
+    void leftViewUtil(Node root, HashMap<Integer, Pair> m, int x, int y, int[] maxy) {
+        if (root == null)
+            return;
+        if (!m.containsKey(y) || x < m.get(y).second) {
+            m.put(y, new Pair(root.data, x));
+        }
+        maxy[0] = Math.max(y, maxy[0]);
+        leftViewUtil(root.left, m, x - 1, y + 1, maxy);
+        leftViewUtil(root.right, m, x + 1, y + 1, maxy);
     }
 
     public static void main(String[] args) {
@@ -407,13 +454,13 @@ class MyBT {
         bt.root.right.left = new Node(6);
         bt.root.right.right = new Node(7);
         bt.levelorder();
-        bt.diameter();
+        bt.leftView();
     }
 
     static class Node {
         int data;
         Node left, right;
-        
+
         Node(int data) {
             this.data = data;
         }
@@ -422,11 +469,20 @@ class MyBT {
     static class Tuple {
         Node parent;
         int level, data;
-        Tuple(Node parent, int level, int data) { 
+
+        Tuple(Node parent, int level, int data) {
             this.parent = parent;
             this.level = level;
             this.data = data;
         }
     }
-}
 
+    static class Pair {
+        int first, second;
+
+        Pair(int f, int s) {
+            first = f;
+            second = s;
+        }
+    }
+}
