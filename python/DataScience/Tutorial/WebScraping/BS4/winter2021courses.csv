@@ -1,0 +1,300 @@
+Course Name,Course Acronym,Course Code,Prerequisites,Antirequisites,Semester
+Foundations of Biology,FOB,BIO101,None,None,Winter
+Cell Biology and Bio-Chemistry,CBBC,BIO211,None,BIO511,Monsoon
+Introduction to Quantitative Biology,IQB,BIO213,MTH100,None,Winter
+Genetics and Molecular Biology,GMB,BIO214,None,None,Monsoon
+Practical Bioinformatics,PB,BIO221,None,None,Winter
+Algorithms in Bioinformatics,ABIN,BIO321,CSE222,None,Monsoon
+Biophysics,BioP,BIO361,None,None,Monsoon
+Stochastic Simulations in Systems Biology and Biophysics,SSSBB,BIO506,BIO531,None,Monsoon
+Cell Biology and Bio-Chemistry,CBB,BIO511,None,BIO211,Monsoon
+Foundations of Modern Biology,FOMB,BIO512,None,"BIO601, BIO214",Monsoon
+Algorithms in Computational Biology,ACB,BIO522,None,None,Monsoon
+Chemoinformatics,CHI,BIO523,None,None,Winter
+Introduction to Mathematical Biology,IMB,BIO531,MTH100,BIO303/BIO503,Winter
+Network Biology,NB,BIO532,None,None,Monsoon
+Systems and Synthetic Biology,S&SB,BIO533,"BIO531, BIO501",None,Winter
+Introduction to Computational Neuroscience,ICN,BIO534,None,BIO505,Winter
+Data Sciences for Genomics,DSG,BIO541,None,None,Winter
+Machine Learning for Biomedical Applications,MLBA,BIO542,None,None,Monsoon
+Big Data Mining in Healthcare,BDMH,BIO543,None,None,Winter
+Computational Gastronomy,CGAS,BIO544,None,None,Monsoon
+Biostatistics,BioStats,BIO545,None,None,Winter
+Computing for Medicine,CM,BIO546/CSE585,None,None,Monsoon
+Computer Aided Drug Design,CADD,BIO561,None,None,Winter
+Network Science,NS,CSE655,None,None,Winter
+Communication Skills,COM,COM101,None,None,Monsoon
+Technical Communication,TCOM,COM301A,None,None,Monsoon
+Introduction to Programming,IP,CSE101,None,None,Monsoon
+Data Structures & Algorithms,DSA,CSE102,CSE101,None,Winter
+Computer Organization,CO,CSE112,ECE111,None,Winter
+Discrete Mathematics,DM,CSE121,None,None,Monsoon
+Introduction to Intelligent Systems,IIS,CSE140,None,None,Winter
+Advanced Programming,AP,CSE201,"CSE101, CSE102",None,Monsoon
+Fundamentals of Database Management System,DBMS,CSE202,CSE102,None,Winter
+Algorithm Design and Analysis,ADA/ALD,CSE222,CSE102,None,Winter
+Operating Systems,OS,CSE231,CSE102,None,Monsoon
+Computer Networks,CN,CSE232,"CSE101, CSE231, CSE222",None,Monsoon
+Network Administration,NAD,CSE233,None,None,Winter
+Compilers,CMP,CSE301/CSE601,"MTH100, CSE101, CSE201, CSE102",None,Monsoon
+Modern Algorithm Design,MAD,CSE319/CSE519,CSE222,None,Monsoon
+Advanced Algorithms,AA,CSE320/CSE520,CSE102,None,Monsoon
+Theory of Computation,ToC,CSE322,CSE121 or MTH210,None,Winter
+Computer Graphics,CG,CSE333/CSE533,CSE101,None,Monsoon
+Statistical Machine Learning,SML,CSE342/CSE542,"CSE101, MTH201",PatternRecognition,Winter
+Machine Learning,ML,CSE343/CSE543,"MTH100, MTH201, CSE101, MTH203",None,Monsoon/Winter
+Computer Vision,CV,CSE344/CSE544/ECE344/ECE544,MTH100,None,Winter
+Foundations of Computer Security,FCS,CSE345/CSE545,None,None,Monsoon
+Network Security,NSC,CSE350/CSE550,None,None,Monsoon
+Networks and System Security II,NSS-II,CSE354/CSE554,"CSE231, CSE232",None,Winter
+Complexity Theory,CMPT,CSE421/CSE621,"CSE102, MTH201, CSE322, CSE121",None,Monsoon
+Advanced Biometrics,BIOM,CSE441/CSE541,CSE343/CSE543,None,Winter
+Designing Human Centered Systems,DHCS,CSE501,None,None,Monsoon
+Foundations of Parallel Programming,FPP,CSE502,"CSE101, CSE102, CSE201",None,Winter
+Program Analysis,PA,CSE503,"CSE102, CSE201",None,Monsoon
+Decision Procedures,DP,CSE504,"CSE102 or CSE201, CSE121 or MTH210",None,Winter
+Data Mining,DMG,CSE506,"CSE202, CSE101, MTH100, MTH201",None,Monsoon
+Database System Implementation,DBSI,CSE507,"CSE202, CSE102",None,Monsoon
+Information Retrieval,IR,CSE508,"CSE102, CSE201, CSE202",None,Winter
+Big Data Analytics,BDA,CSE510,CSE202,None,Winter
+Computer Architecture,CA,CSE511/ECE511,None,None,Monsoon
+Randomized Algorithms,RA,CSE523,"CSE222, CSE121, MTH201",None,Monsoon
+Theory of Modern cryptography,TMC,CSE524,None,None,Monsoon
+Introduction to Graduate Algorithms,GA,CSE525,CSE222,None,Monsoon
+Convex Optimization,COO,MTH377,MTH100,None,Winter
+Approximation Algorithms,AAG,CSE529,CSE222,None,Winter
+Distributed Systems Security,DSS,CSE530,"CSE222, CSE231, CSE202",None,Winter
+Multi-Agent Systems,MAS,CSE531,None,None,Monsoon/Winter
+Mobile Computing,MC,CSE535,CSE101,None,Monsoon
+Wireless Networks,WN,CSE538/ECE538,CSE232,None,Winter
+Applied Cryptography,AC,CSE546,CSE121,None,Monsoon/Winter
+Security Engineering,SE,CSE552,CSE231,None,Monsoon/Winter
+Introduction to Spatial Computing,ISC,CSE555,"CSE102, CSE202",None,Monsoon
+Natural Language Processing,NLP,CSE556,CSE101,None,Monsoon
+Data Science,DSc,CSE558,CSE101,None,Monsoon
+Mining Large Networks,MLN,CSE559,"CSE222, CSE101, MTH201",None,Winter
+GPU Computing,GPU,CSE560,CSE101,None,Winter
+Probabilistic Graphical Models,PGM,CSE561,MTH201,None,Winter
+Advanced Computer Vision,ACV,CSE562,CSE344/CSE544/ECE344/ECE544,None,Monsoon
+Multimedia Computing and Applications,MCA,CSE563,None,None,Winter
+Reinforcement Learning,RL,CSE564,MTH201,None,Monsoon
+Software Defined Networking,SDN,CSE565,CSE232,None,Monsoon
+Mobile and Middleware Systems,MMS,CSE566/DES5MMS,CSE535,None,Monsoon
+Virtual Reality,VR,CSE570,None,None,Winter
+Introduction to Media Computing,IMC,CSE571,None,None,Monsoon/Winter
+Smart Sensing for Internet of Things (IoT),SSIoT,CSE576,None,None,Monsoon
+Advanced Internet of Things,AIOT,CSE577,None,None,Winter
+Ontology Modeling,OM,CSE580A,CSE102,None,Monsoon/Winter
+"Systems Analysis, Design and Requirements Engineering",SADRE,CSE581 ,None,None,Winter
+Software Production Evolution and Maintenance,SPEM,CSE582,None,None,Monsoon
+Software Development using Open Source,SDOS,CSE583,None,None,Monsoon
+Program Verification,PV,CSE584,CSE121 or MTH210,None,Monsoon
+Geometry Processing,GP,CSE5GP,CSE101,None,Monsoon/Winter
+Object Oriented Programming and Design,OOPD,CSE600A/ECE600A,None,None,Monsoon
+Knowledge Graphs in Practice,KG,CSE605A,CSE508 or CSE551,None,Monsoon
+Data Warehouse,DW,CSE606,CSE202,None,Winter
+Data Lifecycle Management,DLM,CSE606A,CSE343/CSE543,None,Monsoon
+Statistical Computation,SComp,CSE609,MTH201,None,Winter
+Introduction to Quantum Computing,IQC,CSE622,MTH100,None,Winter
+Advanced Operating Systems,AOS,CSE631,CSE231,None,Winter
+Semantic Web,Sweb,CSE632,"CSE101, CSE202",None,Winter
+Robotics,IRob,CSE633/ECE670,None,None,Winter
+Social Robotics,SR,CSE633A,None,None,Winter
+Parallel Runtimes for Modern Processors,PRMP,CSE634,"CSE201, CSE231",None,Monsoon
+Communication Networks,COMN,CSE636/ECE636,MTH201,None,Winter
+Collaborative Filtering,CF,CSE640,MTH100,None,Monsoon
+Deep Learning,DL,CSE641,None,None,Winter
+Advanced Machine Learning,AML,CSE642,"MTH201, CSE343/CSE543, CSE342/CSE542",APRML,Monsoon
+Artificial Intelligence,AI,CSE643,CSE102,None,Monsoon
+Privacy and Security in Online Social Media,PSOSM,CSE645,None,None,Winter
+Topics in Adaptive Cybersecurity,TAC,CSE651,CSE345/CSE545,None,Monsoon
+Information Integration and Applications,IIA,CSE656,CSE202,None,Monsoon
+Affective Computing,AFC,CSE661,"CSE101, CSE102, CSE201",None,Monsoon
+Special Topics in Computer Vision,SCV,CSE662A,ECE350,None,Winter
+Edge AI,EAI,CSE663,"CSE343/CSE543, CSE342/CSE542",None,Winter
+Multimedia Security,MS,CSE694F/ECE651,ECE350,None,Winter
+Advanced Topics in Mobile Computing,ATMC,CSE734,CSE232,None,Winter
+Network Anonymity and Privacy,NAP,CSE749,None,None,Monsoon
+Topics in Cryptanalysis,TC,CSE793A,None,None,Winter
+Design Drawing & Visualization,DDV,DES101,None,None,Winter
+Prototyping Interactive Systems,PIS,DES130,None,None,Monsoon
+Design Processes and Perspectives,DPP,DES201,DES101 or DES202,None,Monsoon
+Visual Design & Communication,VDC,DES202,DES101,None,Monsoon
+Human Computer Interaction ,HCI,DES204,None,None,Winter
+Animation and Graphics,A&G,DES302,None,None,Winter
+Film Making and Radio Podcasting,FMRP,DES303,None,None,Monsoon
+Fundamentals of Audio for Engineers,FAE,DES501,None,None,Monsoon
+Narratives in Visual Communication,NVC,DES504,None,None,Winter
+Fundamentals of Video for Engineers,FVE,DES507,None,None,Winter
+Game Design and Development,GDD,DES512,None,None,Winter
+"Wearable Applications, Research, Devices, Interactions",WARDI,DES513,None,None,Monsoon
+Digital Audio,DA,DES514,None,None,Monsoon
+Information Systems in Public Health,ISPR,DES515,None,None,Monsoon
+Introduction to 3D Production Design for Animation and Games,I3DD,DES516,None,DES302,Monsoon
+Introduction to 3D Character Animation,I3D,DES516s,None,DES302,Winter
+Introduction to Motion Graphics,IMG,DES518,None,None,Monsoon
+Design of Interactive Systems,DIS,DES519,None,None,Monsoon
+Human Centred AI,HCAI,DES520,"DES204, CSE643 or CSE343/CSE543 or CSE440",None,Monsoon
+Digital Circuits,DC,ECE111,None,None,Monsoon
+Basic Electronics,BE,ECE113,None,None,Winter
+Integrated Electronics,IE,ECE214,"ECE111, ECE113, DES130",None,Winter
+Circuit Theory and Devices,CTD,ECE215,None,None,Monsoon
+Fields and Waves,F&W,ECE230,MTH100,None,Winter
+Principles of Communication Systems,PCS,ECE240,"ECE250, MTH201",None,Winter
+Signals and Systems,S&S,ECE250,MTH100,None,Monsoon
+Embedded Logic Design,ELD,ECE270,None,None,Monsoon
+Digital VLSI Design,DVD,ECE314/ECE514,None,None,Monsoon
+Analog CMOS Circuit Design,CMOS,ECE315/ECE515,None,None,Monsoon
+Solid State Devices,SSD,ECE318,None,None,Monsoon
+RF Circuit Design,RFCD,ECE321/ECE521,ECE230,None,Winter
+Digital Communication Systems,DCS,ECE340,ECE240,None,Monsoon
+Mobile Communications,MCOM,ECE343,ECE240,None,Winter
+Digital Image Processing,DIP,ECE350,"MTH100, MTH201",None,Monsoon
+Digital Signal Processing,DSP,ECE351,ECE250,None,Monsoon
+Antennas Theory and Design,ATD,ECE431/ECE631,ECE230,None,Monsoon
+Radar Systems,RS,ECE432/ECE632,ECE250,None,Winter
+Statistical Signal Processing,SSP,ECE452/ECE552,"MTH100, MTH201, ECE250",None,Winter
+Probability and Random Process,PRP,ECE501,ECE240,None,Monsoon
+Digital Hardware Design,DHD,ECE510,ECE270,None,Monsoon
+VLSI Design Flow,VDF,ECE513,ECE101,None,Monsoon
+System on Chip Design and Test,SCDT,ECE516,"ECE314/ECE514, CSE234",None,Monsoon
+Introduction to Nanoelectronics,INE,ECE517,None,None,Winter
+Intelligent Applications Implementation on Heterogeneous Platforms,IAI,ECE519,CSE112,None,Monsoon
+Low Voltage Analog Circuit Design,LVACD,ECE520,ECE315/ECE515,None,Monsoon
+Integrated Circuit Fabrication,ICF,ECE522,None,None,Monsoon
+Satellite Navigation and Sensor Fusion,SNSF,ECE533,ECE351,None,Monsoon
+Optical Communications Systems,OCS,ECE534,ECE240,None,Winter
+Optical Networking,ON,ECE536s,None,None,Summer
+Wireless Communication Evolution from 3G to 5G,WCE,ECE537,ECE240,None,Winter
+Wireless System Implementation,WSI,ECE539,ECE240,None,Winter
+Principals of Digital Communication System,PDCS,ECE543,ECE240,None,Monsoon
+Photonics: Fundamentals & Applications,Pho,ECE545,ECE230,None,Monsoon
+Bayesian Machine Learning,BML,ECE551,"ECE501, ECE452 or CSE342/CSE542",None,Monsoon
+Compressive Sensing,CS,ECE554,MTH100,None,Monsoon
+Speech Recognition and Understanding,SRU,ECE557,ECE250,None,Winter
+Transform Learning and Applications,TLA,ECE558,MTH100,ECE362/ECE562,Winter
+Modeling and Analysis of Random 5G Networks,5GN,ECE55G,MTH201,None,Winter
+Control Theory,CNT,ECE570,None,None,Monsoon
+Optimal Control Systems,OCNS,ECE571,None,None,Winter
+Advanced Embedded Logic Design,AELD,ECE573,CSE234,None,Winter
+Machine Learning Techniques for Real-time Control,MLRC,ECE577,None,None,Winter
+Nonlinear and Adaptive Control of Robotic Systems,NLR,ECE579,None,None,Monsoon
+Autonomous Driving,AD,ECE581,None,None,Winter
+Memory Design and Testing,MDT,ECE611,"ECE111, ECE113",None,Winter
+Mixed Signal Design,MSD,ECE612,ECE315/ECE515,None,Winter
+Stochastic Estimation and Control,SEC,ECE672,ECE501,None,Winter
+Microeconomics,ME,ECO101,None,ECO301,Winter
+Macroeconomics,MA,ECO201,None,None,Monsoon
+Money and Banking,MB,ECO223,None,None,Winter
+Introduction to Economic Analysis,IEA,ECO301,None,None,Monsoon/Winter
+Game Theory,GMT,ECO311,None,ECO304,Monsoon
+Industrial Organization,IO,ECO312,ECO101 or ECO311,None,Winter
+Market Design,MD,ECO313,ECO311,None,Winter
+Behavioural Economics,BEco,ECO314,MTH201,None,Monsoon
+Econometrics I,ECO,ECO321,MTH201,ECO302,Monsoon
+Econometrics II,Econ-2,ECO322/ECO522,ECO321,None,Monsoon
+Spatial Statistics and Spatial Econometrics,SSSE,ECO324/ECO524,ECO321,None,Winter
+Foundations of Finance,FF,ECO331,None,FIN401,Monsoon
+Valuation and Portfolio Management,VPM,ECO332,None,None,Winter
+Derivatives and Risk Management,DRM,ECO333,ECO331 or ECO332,None,Monsoon
+Decision Theory,DT,ECO503,None,None,Monsoon
+Research Methods,RM,ENG599s,None,None,Winter
+Entrepreneurial Communication,EComm,ENT411,None,None,Monsoon
+Entrepreneurial Khichadi,EK,ENT412,None,None,Monsoon
+Entrepreneurial Finance,EF,ENT413,None,None,Winter
+Relevance of Intellectual Property for Startups,RIPS,ENT414,None,None,Winter
+New Venture Planning,NVP,ENT415,None,None,Winter
+"Creativity, Innovation, and Inventive Problem Solving",CIIPS,ENT416/ENT516,None,None,Winter
+Healthcare Innovation and Entrepreneurship Essentials,HIEE,ENT421/BIO571,None,None,Monsoon
+Environmental Sciences,EVS,ESC205,None,ESC207A,Monsoon
+"Ecology, Evolution, and Environment",EEE,ESC207A,None,ESC205,Monsoon
+Effective Supply Chain for E Commerce,ESCM,MGT310,None,None,Monsoon
+Emerging Issues in IT Management,EIITM,MGT311,None,None,Winter
+Linear Algebra,M-I,MTH100,None,None,Monsoon
+Introduction to Mathematical Logic,IML,MTH200,None,None,Winter
+Probability and Statistics,P&S,MTH201,None,None,Winter
+Multivariate Calculus,M-III,MTH203,None,MTH240,Monsoon
+Differential Equations,M-IV,MTH204,MTH203,None,Winter
+Discrete Structures,DS,MTH210,None,None,Monsoon
+Number Theory,NT,MTH211,None,None,Monsoon
+Abstract Algebra I,AA-I,MTH212,None,MTH302,Winter
+Real Analysis I,RA-I,MTH240,None,MTH203,Monsoon
+Numerical Methods,NM,MTH270,"MTH100, MTH204",None,Monsoon/Winter
+Algebra,ALG,MTH302,None,MTH212,Monsoon
+Graph Theory,GT,MTH310,None,None,Winter
+Combinatorics and its Applications,CIA,MTH311,MTH100,None,Winter
+Real Analysis-II,RA-II,MTH340,MTH240,None,Monsoon
+Introduction to Dynamical Systems,IDS,MTH343/MTH543,"MTH100, MTH203, MTH240",None,Winter
+Stochastic Processes and Applications,SPA,MTH371,MTH201,None,Monsoon
+Statistical Inference,SI,MTH372,MTH201,"ECE452/ECE552, ECO321,  CSE609",Winter
+Scientific Computing,SC,MTH373,MTH100,MTH270,Monsoon
+Linear Optimization,LO,MTH374/MTH574,MTH100,MTH305/MTH505,Winter
+Fluid Mechainics,FM,MTH375/MTH575,MTH204,None,Monsoon
+Advanced Linear Algebra,ALA,MTH510,MTH100,None,Winter
+Algebraic Number Theory,ANT,MTH512,None,None,Monsoon
+Abstract Algebra II,AA-II,MTH513,"MTH100, MTH212",None,Winter
+Coding Theory,COT,MTH514,"MTH100, MTH212, MTH513",None,Winter
+Analytic Number Theory,ANNT,MTH516,MTH341,None,Winter
+Combinatorial Optimization,CMO,MTH517,MTH374/MTH574,None,Winter
+Topics in Number Theory,TNT,MTH518,MTH211,None,Monsoon
+Complex Analysis,CmpA,MTH541,MTH240,None,Monsoon
+Introduction to Functional Analysis,IFA,MTH542,MTH100,None,Winter
+Calculus in R^N,CRN,MTH544,"MTH100, MTH203 or MTH240",None,Winter
+Finite and Spectral Element Methods,FSEM,MTH545,"MTH100, MTH203 or MTH240, MTH204",None,Monsoon
+Introduction to PDE,IPDE,MTH550,MTH204,None,Winter
+Point Set Toplogy,PST,MTH562,None,None,Monsoon
+Point Set Toplogy,PST-2,MTH562A,None,MTH562,Monsoon
+Introduction to Riemannian Geometry with Some Applications,IRG,MTH564A,"MTH100, MTH203",None,Monsoon
+Numerical Solutions Differential Equations,NSDE,MTH570,"MTH100, MTH203, MTH240",None,Winter
+Integral Transforms and their Applications,ITA,MTH571,MTH204,None,Winter
+Categorical Data Analysis,CDA,MTH576,MTH201,None,Monsoon
+Numerical Partial Differential Equations,NPDE,MTH598,"MTH100, MTH203, MTH240",MTH570,Winter
+Variational Calculus and their Applications,VCA,MTH599,MTH203,None,Winter
+Measure and Probability Theory,MPT,MTH5MPT,MTH240 or MTH203,None,Winter
+Introduction to Psychology,Psy,PSY201,SSH101,None,Monsoon
+Positive Psychology,Ppsy,PSY202,None,None,Winter
+Cognitive Psychology,CP,PSY301,None,PSY201,Winter
+Social Psychology,SP,PSY302,None,None,Winter
+Attention and Perception,ATP,PSY305,None,None,Winter
+Learning and Memory,LM,PSY306,None,None,Winter
+Neuroscience of Decision Making,NDM,PSY307,None,None,Monsoon
+Cognition of Motor Movement,CMM,PSY308,"CSE101, PSY201",None,Monsoon
+Introduction to Sociology and Anthropology,ISA,SOC101,SSH101,"HSS205, HSS215",Winter
+Contemporary India: Sociological Perspective,CISP,SOC202,None,None,Monsoon
+Sociology of New Media,SNM,SOC204,None,None,Monsoon
+Anthropology and Social Media,ASM,SOC205,None,None,Winter
+Business Anthropology,BA,SOC206,None,None,Monsoon
+Information Technology And Society,ITS,SOC207,None,"HSS212, SSH101",Winter
+Organizations An Anthropological Perspective,OAP,SOC208,None,None,Winter
+Consumer Culture and Society,CCS,SOC209,None,None,Monsoon
+Sociological Theory,ST1,SOC210,None,None,Winter
+"Science, Technology and Society",STS,SOC211,None,None,Winter
+Key Concepts in Economic Sociology,KCES,SOC212,None,None,Monsoon
+Urban Sociology,US,SOC302,None,None,Winter
+Digital Social Research,DSR,SOC307,None,None,Monsoon
+Gender and Media,GM,SOC308,None,None,Monsoon
+Advance Ethnographic Research Methods,AERM,SOC311/SOC501,SSH201,None,Monsoon
+Advanced Sociological Theory,AST,SOC312/SOC502,None,None,Winter
+Sociology of India,SoI,SOC313/SOC503,None,None,Winter
+Critical Thinking and Readings in Social Science ,CTRSS,SSH101,None,None,Winter
+Introduction to Philosophy,IPHI,SSH121,None,None,Monsoon
+Critical Thinking,CT,SSH124,None,SSH101,Winter
+Research Methods in Social Science and Design,RMSSD,SSH201,SSH101,None,Monsoon
+Theatre Appreciation,TA,SSH211,None,HSS211,Monsoon
+Introduction To The Study Of Literature,Lit,SSH214,None,None,Winter
+Nation and her Narratives,NN,SSH215,None,None,Winter
+Introduction to Indian Mythology,IIM,SSH216,None,HSS219,Monsoon
+Indian Poetry Through the Ages,IPA,SSH217,None,None,Winter
+Social and Political Philosophy,SPP,SSH221,None,None,Monsoon
+Theory and Practice of Engineering Ethics,TPEE,SSH222,None,None,Winter
+Perspectives of Knowledge,PoK,SSH223,None,None,Monsoon
+"Computer, Information Ethics and Society",CIES,SSH224,None,None,Winter
+Democracy in India: Principles and Practices,DIPP,SSH261,None,None,Winter
+Theories of Ethics,TE,SSH300,None,None,Monsoon
+Advanced Writing,AW,SSH311,None,None,Winter
+Applied Ethics,AE,SSH321,None,None,Winter
+New Media and Politics,NMP,SSH323,None,None,Monsoon
+Philosophy of Mind,PoM,SSH324,SSH121,None,Winter
+Comparative Politics in Digital Era,CPDE,SSH361,None,None,Winter
+Urban Space and Political Power,USPP,SSH362/SSH562,None,None,Monsoon/Winter
+Philosophy of Technology,PT,SSH3PT,None,None,Winter

@@ -1,23 +1,16 @@
 def gcd(a, b):
     if b == 0:
         return a
-    return gcd(b, a%b)
+    return gcd(b, a % b)
 
-def gcdIterative(a,b):
+
+def gcdIterative(a, b):
     while b:
-        a, b = b, a%b
+        a, b = b, a % b
     return a
 
 
 print(gcdIterative(1072, 42))
-    
-
-
-
-
-
-
-
 
 
 '''
