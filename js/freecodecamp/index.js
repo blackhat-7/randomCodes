@@ -1,4 +1,8 @@
-import React from "react"
-import ReactDOM from "react-dom"
+class Number {
+	constructor(number) {
+		this.number = number;
+	}
+}
 
-ReactDOM.render(<h1>Hello World</h1>, Document.getElementById('root'))
+let num = new Number(42);
+console.log(num.number)
