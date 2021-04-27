@@ -7,7 +7,6 @@ while(t):
     ma = max(m)
     for i in m:
         if i + 100-ma >= 50:
-            count+=1
+            count += 1
         print(count)
-        t-=1
-
+        t -= 1

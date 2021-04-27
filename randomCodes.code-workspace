@@ -1,0 +1,16 @@
+{
+    "folders": [
+        {
+            "path": "."
+        },
+        {
+            "name": ".leetcode",
+            "path": "../../.leetcode"
+        }
+    ],
+    "settings": {
+        "files.associations": {
+            "chrono": "cpp"
+        }
+    }
+}
