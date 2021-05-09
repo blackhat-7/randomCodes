@@ -15,16 +15,19 @@ def solve(k, d0, d1):
   repeat = [2, 4, 8, 6]
   j = 0
 
-  while cur_d not in repeat:
+  while j < k-2 and cur_d not in repeat:
     cur_d = cur_s % 10
     res += cur_d
     cur_s += cur_d
     j += 1
 
   for i in range(4):
-    x = get_next(cur_d)
-    res += (k-j-2)//4 * x
+    if j >= k-2:
+      break
+    cur_d = get_next(cur_d)
+    res += (1 + (k-j-2)//4) * cur_d
     j += 1
+  print(res)
   if res % 3 == 0:
     print("YES")
   else:
@@ -35,3 +38,4 @@ t = int(input())
 for q in range(t):
   k, d0, d1 = map(int, input().split())
   solve(k, d0, d1)
+
